@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OpinionActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#106184" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dip"
+            android:text="意见反馈"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip" >
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/opinion_one"
+            style="@style/opinion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/option_one" />
+
+        <Spinner
+            android:id="@+id/opinion_selet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/opinion_one" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip" >
+
+        <TextView
+            android:id="@+id/opinion_two"
+            style="@style/opinion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/option_two" />
+
+        <EditText
+            android:id="@+id/opinion_centet"
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:layout_below="@id/opinion_two"
+            android:layout_marginTop="5dip"
+            android:gravity="left"
+            android:hint="@string/option_two_one"
+            android:maxHeight="150dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip" >
+
+        <TextView
+            android:id="@+id/opinion_th"
+            style="@style/opinion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/option_th" />
+
+        <EditText
+            android:id="@+id/option_conten1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/opinion_th"
+            android:layout_marginTop="5dip"
+            android:gravity="left"
+            android:hint="@string/option_th_one"
+            android:maxLength="25"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip" >
+
+        <Button
+            android:id="@+id/opinion_submit"
+            android:paddingLeft="60dip"
+            android:paddingRight="60dip"
+            android:layout_centerInParent="true"
+            android:text="@string/option_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="BttonClick" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zhufu"
+    android:versionCode="3"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="10" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.zhufu.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.example.zhufu.WelcomeActivity"
+            android:theme="@style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.zhufu.HomeActivity"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name="com.example.zhufu.CatActivity"
+            android:label="@string/title_activity_cat" >
+        </activity>
+        <!-- 在activity中设置动画  不会存在 关闭动画不能用 -->
+        <activity
+            android:name="com.example.zhufu.MiddleActivity"
+            android:label="@string/title_activity_middle"
+            android:theme="@style/ThemeActivity" >
+        </activity>
+        <activity
+            android:name="com.example.zhufu.AddActivity"
+            android:label="@string/title_activity_add"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.zhufu.MoreActivity"
+            android:label="@string/title_activity_more" >
+        </activity>
+
+        <service
+            android:name="com.tool.Mp3Service"
+            android:enabled="true" />
+
+        <activity
+            android:name="com.example.zhufu.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AboutThemeActivity" >
+        </activity>
+        <activity
+            android:name="com.example.zhufu.SearchActivity"
+            android:launchMode="singleTop" >
+
+            <!-- 搜索框拦截启 -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <!-- 全局调用搜索框 -->
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="MoreActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <!-- 保存搜索配置 -->
+        <provider
+            android:name="com.searchable.SearchableSave"
+            android:authorities="com.searchable.SearchableSave" >
+        </provider>
+
+        <activity
+            android:name="com.example.zhufu.OpinionActivity"
+            android:label="@string/title_activity_opinion"
+            android:theme="@style/AboutThemeActivity" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许创建和删除外部存储设备的文件 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 电话操作权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+</manifest>

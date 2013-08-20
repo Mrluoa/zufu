@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MiddleActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#106184" >
+
+        <TextView
+            android:id="@+id/midd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dip"
+            android:text="@string/midd_title"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <!-- 祝福音乐开始 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:text="@string/midd_cont1"
+        android:textColor="#8C8C8C"
+        android:textSize="15sp" >
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/ic_more_item_default" >
+
+        <Button
+            android:id="@+id/midd_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:background="@drawable/play_back"
+            android:onClick="mediaplay" />
+
+        <TextView
+            android:id="@+id/midd_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="20dip"
+            android:layout_toRightOf="@id/midd_play"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:text="单击播放加载音乐 ,建议使用Wifi播放音乐(在普通网络下使用,会产生大量流量)...." />
+    </RelativeLayout>
+
+    <!-- 祝福内容开始 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:text="@string/midd_cont"
+        android:textColor="#8C8C8C"
+        android:textSize="15sp" >
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/ic_more_item_default" >
+
+        <TextView
+            android:id="@+id/midd_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingLeft="20dip"
+            android:paddingTop="10dip"
+            android:text="To:谁哈"
+            android:textColor="#FF3992"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/midd_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/midd_pick"
+            android:lineSpacingExtra="6dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:text="　啊打开带大我啊打武大伟吴大维大碗大碗大武大伟阿维达我的阿维达我阿维达我的阿瓦我的娃阿瓦达哇" />
+
+        <TextView
+            android:id="@+id/midd_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/midd_content"
+            android:layout_marginRight="20dip"
+            android:gravity="right"
+            android:paddingBottom="5dip"
+            android:text="Mrluo"
+            android:textColor="#FF3992" />
+
+        <TextView
+            android:id="@+id/midd_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/midd_send"
+            android:layout_marginRight="20dip"
+            android:gravity="right"
+            android:paddingBottom="10dip"
+            android:text="2013-12-29 20:25:16"
+            android:textColor="#AAAAAA" />
+    </RelativeLayout>
+
+</LinearLayout>

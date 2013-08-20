@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中后 -->
+    <item android:drawable="@drawable/song_recognition_btn_play_press" android:state_pressed="true"/>
+    <item android:drawable="@drawable/song_recognition_btn_play_press" android:state_focused="true"/>
+    <!-- 为选择 -->
+    <item android:drawable="@drawable/song_recognition_btn_play_normal"/>
+</selector>
